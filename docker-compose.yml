@@ -1,0 +1,9 @@
+version: '3.9'
+services:
+  apache:
+    image: httpd:${tag}
+    container_name: apache
+    ports:
+    - '${ext_port}:80'
+    volumes:
+    - ./site:/usr/local/apache2/htdocs
